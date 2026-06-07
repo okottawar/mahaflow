@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MahaFlow
+
+**Adaptive Mobility Intelligence System for Large Religious Gatherings**
+
+MahaFlow is a real-time transportation intelligence platform designed for managing crowd mobility at scale. It uses a configurable fuzzy logic reasoning engine to assess congestion risk, recommend optimal routes, and surface explainable operational decisions — all without relying on LLMs or external APIs.
+
+Built as a frontend-only application running entirely on simulated data.
+
+---
+
+## Features
+
+- **Mobility Overview Dashboard** — Real-time metrics for total pilgrims, congestion index, critical zones, parking utilization, and system health
+- **Network Visualization** — Stylized SVG transportation graph with 15 nodes and 22 routes, color-coded by risk level with interactive inspection
+- **Route Advisor** — Transport-aware pathfinding (Walking, Shuttle, Bus, Private, Emergency) using Dijkstra's algorithm with mode-specific weights
+- **Authority Control Room** — Critical route monitoring, parking saturation tracking, zone health overview, and operational recommendations
+- **Fuzzy Logic Engine** — 16 configurable rules with trapezoidal membership functions, AND-semantics activation, and weighted defuzzification
+- **Explainable Decisions** — Every risk score shows triggered rules, input conditions, activation strengths, and natural-language recommendations
+- **Live Simulation** — Time-of-day crowd profiles, sinusoidal event surges, and parking saturation curves updating every 5 seconds
+- **Multilingual** — Full interface support for English, Hindi (हिंदी), and Marathi (मराठी)
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Framework | Next.js 16 (App Router) |
+| Language | TypeScript |
+| Styling | Vanilla CSS (editorial design system) |
+| Animation | Framer Motion |
+| Typography | DM Serif Display · DM Sans · DM Mono |
+| Intelligence | Custom fuzzy logic engine (no ML/LLM dependencies) |
+| Data | Local simulated data (no backend or database) |
+
+---
+
+## Architecture
+
+```
+src/
+├── app/                    # Next.js pages
+│   ├── page.tsx            # Overview Dashboard
+│   ├── map/page.tsx        # Network Map
+│   ├── advisor/page.tsx    # Route Advisor
+│   └── control/page.tsx    # Control Room
+├── components/             # React components
+│   ├── Layout.tsx          # App shell with sidebar
+│   ├── NetworkGraph.tsx    # SVG network visualization
+│   ├── ExplainPanel.tsx    # Fuzzy reasoning display
+│   ├── StatCard.tsx        # Metric cards
+│   ├── RiskBadge.tsx       # Risk level indicators
+│   └── LanguageSwitcher.tsx
+├── context/
+│   └── SimulationContext.tsx  # Global state provider
+└── lib/
+    ├── data/               # Static data definitions
+    │   ├── nodes.ts        # 15 network nodes
+    │   ├── routes.ts       # 22 transport routes
+    │   ├── fuzzyRules.ts   # 16 configurable rules
+    │   └── translations.ts # EN/HI/MR dictionaries
+    └── engine/             # Core intelligence
+        ├── fuzzyEngine.ts          # Fuzzification → Rules → Defuzzification
+        ├── simulationEngine.ts     # Time-based crowd simulation
+        └── recommendationEngine.ts # Dijkstra pathfinding
+```
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm
+
+### Install & Run
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Design Principles
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Not an LLM wrapper** — Intelligence comes from a configurable fuzzy logic engine
+- **Explainability first** — Every decision is traceable to specific rules and input conditions
+- **Editorial aesthetic** — Calm, authoritative design inspired by transportation operations centers
+- **Zero external dependencies** — No APIs, databases, or authentication required
+- **Fully client-side** — Runs entirely in the browser from simulated data
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT

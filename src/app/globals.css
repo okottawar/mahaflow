@@ -1,8 +1,8 @@
-/* =============================================
-   MahaFlow — Design System
+﻿/* =============================================
+   MahaFlow â€” Design System
    Transportation Intelligence Platform
    
-   Calm · Authoritative · Intelligent · Operational
+   Calm Â· Authoritative Â· Intelligent Â· Operational
    ============================================= */
 
 /* --- CSS Custom Properties --- */
@@ -37,9 +37,9 @@
   --shadow-md: 0 3px 12px rgba(13, 15, 18, 0.05), 0 1px 4px rgba(13, 15, 18, 0.03);
   --shadow-lg: 0 6px 24px rgba(13, 15, 18, 0.07), 0 2px 8px rgba(13, 15, 18, 0.03);
 
-  --font-heading: var(--font-heading), "DM Serif Display", Georgia, serif;
-  --font-body: var(--font-body), "DM Sans", -apple-system, sans-serif;
-  --font-mono: var(--font-mono), "DM Mono", "Courier New", monospace;
+  --ff-heading: var(--font-heading, "DM Serif Display"), "DM Serif Display", Georgia, serif;
+  --ff-body: var(--font-body, "DM Sans"), "DM Sans", -apple-system, sans-serif;
+  --ff-mono: var(--font-mono, "DM Mono"), "DM Mono", "Courier New", monospace;
 
   --sidebar-width: 272px;
   --page-padding: 48px;
@@ -61,7 +61,7 @@ html {
 }
 
 body {
-  font-family: var(--font-body);
+  font-family: var(--ff-body);
   color: var(--text-primary);
   background-color: var(--bg);
   line-height: 1.65;
@@ -69,7 +69,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
+  font-family: var(--ff-heading);
   font-weight: 400;
   line-height: 1.2;
 }
@@ -115,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 6px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   line-height: 1.4;
 }
 
@@ -209,7 +209,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .sim-status-label {
   font-size: 0.68rem;
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -236,7 +236,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sim-time-value {
-  font-family: var(--font-heading);
+  font-family: var(--ff-heading);
   font-size: 1.65rem;
   color: var(--text-primary);
   letter-spacing: -0.02em;
@@ -249,7 +249,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sim-tick {
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   font-size: 0.62rem;
   color: var(--text-faint);
   text-transform: uppercase;
@@ -257,7 +257,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sim-network-status {
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   font-size: 0.6rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -289,7 +289,7 @@ h1, h2, h3, h4, h5, h6 {
   background: transparent;
   color: var(--text-muted);
   font-size: 0.73rem;
-  font-family: var(--font-body);
+  font-family: var(--ff-body);
   cursor: pointer;
   transition: all 0.2s ease;
   font-weight: 500;
@@ -340,14 +340,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .page-time {
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   font-size: 0.78rem;
   color: var(--text-muted);
   letter-spacing: 0.04em;
 }
 
 .system-badge {
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -379,7 +379,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .card-title {
   font-size: 0.68rem;
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--text-muted);
@@ -390,7 +390,7 @@ h1, h2, h3, h4, h5, h6 {
    STAT CARDS
    ============================================= */
 
-/* Hero Stats — Primary Visual Anchors */
+/* Hero Stats â€” Primary Visual Anchors */
 .hero-stat-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -445,7 +445,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .stat-card-label {
   font-size: 0.65rem;
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--text-muted);
@@ -453,7 +453,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .stat-card-value {
   font-size: 1.8rem;
-  font-family: var(--font-heading);
+  font-family: var(--ff-heading);
   color: var(--text-primary);
   display: flex;
   align-items: baseline;
@@ -484,7 +484,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .stat-trend {
   font-size: 0.8rem;
-  font-family: var(--font-body);
+  font-family: var(--ff-body);
   font-weight: 600;
 }
 
@@ -501,7 +501,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--accent);
   margin-top: 6px;
   font-weight: 500;
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   letter-spacing: 0.02em;
 }
 
@@ -515,7 +515,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 4px 12px;
   border-radius: var(--radius-sm);
   font-size: 0.68rem;
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -602,7 +602,7 @@ h1, h2, h3, h4, h5, h6 {
 .risk-fill-critical { background: var(--risk-critical); }
 
 .risk-dist-count {
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   font-size: 0.9rem;
   min-width: 24px;
   text-align: right;
@@ -624,7 +624,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.85rem;
   text-align: center;
   padding: 28px;
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -701,7 +701,7 @@ h1, h2, h3, h4, h5, h6 {
 .env-bar-weather { background: var(--risk-medium); }
 
 .env-value {
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   font-size: 0.78rem;
   color: var(--text-primary);
   min-width: 40px;
@@ -757,7 +757,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .network-node-label {
-  font-family: var(--font-body);
+  font-family: var(--ff-body);
   font-size: 10px;
   font-weight: 500;
   fill: var(--text-secondary);
@@ -765,7 +765,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .network-route-label {
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   font-size: 10.5px;
   font-weight: 500;
   pointer-events: none;
@@ -797,7 +797,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .detail-route-id {
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -835,7 +835,7 @@ h1, h2, h3, h4, h5, h6 {
 .detail-stat-label {
   font-size: 0.72rem;
   color: var(--text-muted);
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
@@ -844,7 +844,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1rem;
   font-weight: 600;
   color: var(--text-primary);
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
 }
 
 .detail-modes {
@@ -856,7 +856,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .detail-mode-tag {
   font-size: 0.62rem;
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   text-transform: uppercase;
   letter-spacing: 0.06em;
   padding: 4px 10px;
@@ -914,7 +914,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .explain-score-number {
-  font-family: var(--font-heading);
+  font-family: var(--ff-heading);
   font-size: 2.4rem;
   color: var(--text-primary);
   letter-spacing: -0.03em;
@@ -922,7 +922,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .explain-score-percent {
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   font-size: 1rem;
   color: var(--text-muted);
   margin-left: 2px;
@@ -945,7 +945,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .explain-label {
   font-size: 0.65rem;
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--text-muted);
@@ -975,7 +975,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .explain-section-title {
   font-size: 0.62rem;
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--text-faint);
@@ -1012,7 +1012,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .explain-rule-id {
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   font-weight: 600;
   color: var(--accent);
   min-width: 30px;
@@ -1042,7 +1042,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .explain-rule-strength {
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   font-size: 0.68rem;
   color: var(--text-muted);
   min-width: 32px;
@@ -1070,7 +1070,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .explain-input-level {
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   font-size: 0.65rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -1084,7 +1084,7 @@ h1, h2, h3, h4, h5, h6 {
 .explain-level-high { color: var(--risk-high); background: var(--risk-high-bg); }
 
 .explain-input-degree {
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   font-size: 0.68rem;
   color: var(--text-faint);
 }
@@ -1130,7 +1130,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .map-legend-title {
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -1188,7 +1188,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .routes-table th {
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   font-size: 0.62rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -1203,7 +1203,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 14px;
   border-bottom: 1px solid var(--border-light);
   color: var(--text-secondary);
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   font-size: 0.78rem;
 }
 
@@ -1243,7 +1243,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .advisor-label {
   font-size: 0.65rem;
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--text-muted);
@@ -1287,7 +1287,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .transport-mode-label {
   font-size: 0.62rem;
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -1298,7 +1298,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 12px 14px;
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  font-family: var(--font-body);
+  font-family: var(--ff-body);
   font-size: 0.85rem;
   color: var(--text-primary);
   background: var(--card);
@@ -1320,7 +1320,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
   border: none;
   border-radius: var(--radius-md);
-  font-family: var(--font-body);
+  font-family: var(--ff-body);
   font-size: 0.88rem;
   font-weight: 600;
   cursor: pointer;
@@ -1365,7 +1365,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .route-result-title {
   font-size: 0.65rem;
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--text-muted);
@@ -1381,7 +1381,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .route-result-path {
-  font-family: var(--font-heading);
+  font-family: var(--ff-heading);
   font-size: 1.3rem;
   color: var(--text-primary);
   margin-bottom: 20px;
@@ -1403,7 +1403,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .route-stat-label {
   font-size: 0.62rem;
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--text-faint);
@@ -1411,7 +1411,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .route-stat-value {
   font-size: 1.3rem;
-  font-family: var(--font-heading);
+  font-family: var(--ff-heading);
   color: var(--text-primary);
   letter-spacing: -0.02em;
 }
@@ -1441,7 +1441,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   color: var(--text-faint);
   padding: 48px;
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -1475,7 +1475,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.78rem;
   text-align: center;
   padding: 28px;
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
@@ -1507,7 +1507,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .critical-route-id {
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   font-weight: 600;
   font-size: 0.88rem;
   letter-spacing: 0.04em;
@@ -1524,7 +1524,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: 18px;
   font-size: 0.72rem;
   color: var(--text-muted);
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   letter-spacing: 0.02em;
 }
 
@@ -1572,7 +1572,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   font-size: 0.68rem;
   color: var(--text-muted);
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   letter-spacing: 0.04em;
 }
 
@@ -1608,7 +1608,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .zone-name {
   font-size: 0.62rem;
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   text-align: center;
   color: var(--text-secondary);
   line-height: 1.3;
@@ -1617,7 +1617,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .zone-util {
   font-size: 1.2rem;
-  font-family: var(--font-heading);
+  font-family: var(--ff-heading);
   color: var(--text-primary);
 }
 
@@ -1644,7 +1644,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .risk-summary-count {
   font-size: 2.2rem;
-  font-family: var(--font-heading);
+  font-family: var(--ff-heading);
   color: var(--text-primary);
   letter-spacing: -0.02em;
 }
@@ -1675,7 +1675,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .rec-route {
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   font-size: 0.68rem;
   color: var(--text-faint);
   letter-spacing: 0.06em;
@@ -1702,14 +1702,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .control-explain-label {
-  font-family: var(--font-heading);
+  font-family: var(--ff-heading);
   font-size: 1.6rem;
   color: var(--text-primary);
   letter-spacing: -0.02em;
 }
 
 .control-explain-subtitle {
-  font-family: var(--font-mono);
+  font-family: var(--ff-mono);
   font-size: 0.62rem;
   color: var(--text-faint);
   text-transform: uppercase;
@@ -1717,7 +1717,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =============================================
-   RESPONSIVE — TABLET
+   RESPONSIVE â€” TABLET
    ============================================= */
 @media (max-width: 1100px) {
   :root {
@@ -1734,7 +1734,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =============================================
-   RESPONSIVE — MOBILE
+   RESPONSIVE â€” MOBILE
    ============================================= */
 @media (max-width: 900px) {
   :root {
